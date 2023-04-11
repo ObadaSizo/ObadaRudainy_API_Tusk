@@ -39,14 +39,14 @@ a {
 }
 @media (min-width: 768px) {
     .container {
-        width: 700px;
+        width: 900px;
     }
 }
 
 /* Medium */
 @media (min-width: 992px) {
     .container {
-        width: 970px;
+        width: 1000px;
     }
 }
 
