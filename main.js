@@ -165,15 +165,15 @@ fetch("https://dummyjson.com/products").then((result) => {
             }
         }
 });
-
+window.onunload = () => {
+    document.querySelector("#spin").classList.remove("d-none")
+    console.log(true)
+}
 window.onload = () => {
     setTimeout(() => {
         document.querySelector("#spin").classList.add("d-none");
     }, 3000);
 }
-window.onunload = () => {
-    document.querySelector("#spin").classList.remove("d-none")
-    console.log(true)
-}
+
 console.log(window);
 
