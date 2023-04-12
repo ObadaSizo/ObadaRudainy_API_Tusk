@@ -134,9 +134,15 @@ fetch("https://dummyjson.com/products").then((result) => {
     }
     let searchBar = document.querySelector("input");
     let card = document.querySelectorAll(".card");
+    let disAppCards = document.querySelector(".products-slide");
     searchBar.onkeyup = () => {
         let n = parseInt(document.querySelector(".active").id.slice(3));
         let value = searchBar.value.toLowerCase();
+        if(searchBar.value !== "") {
+            disAppCards.classList.add("d-none")
+        }else {
+            disAppCards.classList.remove("d-none")
+        }
         for(let i = 0 ; i < 30; i++){
             let cardLowerCase = card[i].innerText.toLowerCase();
                 if(cardLowerCase.indexOf(`${value}`) !== -1) {
